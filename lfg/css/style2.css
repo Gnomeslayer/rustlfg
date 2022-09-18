@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    width: 100%;
+}
+
+#ballooncontainer
+{
+	width: 75%;
+	margin: auto;
+}
+.balloon {
+	width: 25%;
+    position: relative;
+    transform-origin: 50% 300%;
+    width: 16rem;
+    animation: anim 5s ease-in-out 1s infinite alternate;
+	float: left;
+}
+
+.ball {
+    height: 20rem;
+    width: 100%;
+    background: rgba(0,50, 150, .8);
+    border-radius: 80%;
+    position: relative;
+    overflow: hidden;
+    
+    border: 1px solid #555;
+    box-shadow: 2px 2px 5ox #aaa;
+}
+
+.ball:before {
+    content: "";
+    height: 20rem;
+    width: 16rem;
+    background: rgba(0,50, 150, .3);
+    border-radius: 80%;
+    display: inline-block;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+}
+
+.stick {
+    content: "";
+    width: .1rem;
+    height: 200%;
+    background: rgba(50,50,50, .8);
+    display: inline-block;
+    position: absolute;
+    top: 20rem;
+    left: 8rem;
+    overflow: visible;
+}
+
+@keyframes anim {    
+    25% {
+        transform: rotate(-2deg);
+    }
+    75% {
+        transform: rotate(2deg);
+    }
+}

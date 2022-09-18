@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<server>
+  <name>This is the name of the server</name>
+  <ip>This is ip of the server</ip>
+  <bmid>This is the bmid of the server</bmid>
+  <id>This is the id of the server</id>
+</server>

@@ -1,0 +1,948 @@
+body
+{
+	background-color: gray;
+	margin: 0px;
+	font-family: arial;
+	color: rgba(220,220,220,1);
+	background-color: rgba(25, 25, 25, 1);
+}
+
+button
+{
+	width: 30%;
+	margin: auto;
+	font-size: 1.5em;
+	
+	padding-left: 3px;
+	border:2px solid #000;
+	
+	 -webkit-border-radius: 12px; 
+	 -moz-border-radius: 12px; 
+	  border-radius: 12px;
+}
+
+/*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT License
+ *
+ *
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
+
+body
+{
+  margin: 0;
+  padding: 0;
+  
+  /* make it look decent enough */
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+#menu p
+{
+	font-size: 1.5em;
+	color: black;
+}
+
+
+
+#container
+{
+	width: 85%;
+	margin: auto;
+}
+
+#searchserver
+{
+	width: 100%;
+}
+
+#searchserver input
+{
+	width: 100%;
+	font-size: 21px;
+	font-family: crayon;
+	border-radius: 5px;
+}
+
+#searchclan
+{
+	width: 100%;
+}
+
+#searchclan input
+{
+	width: 100%;
+	font-size: 21px;
+	font-family: crayon;
+	border-radius: 5px;
+}
+
+
+#topclans
+{
+	width: 100%;
+	border-radius: 25px;
+	border: 2px solid #73AD21;
+	background-color: gray;
+	padding: 10px;
+	margin-top: 0px;
+	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+
+#topclans-title
+{
+	font-size: 42px;
+	font-weight: bold;
+	float: left;
+}
+
+#rating img
+{
+	width: 45px;
+	height: 45px;
+}
+
+#rating-container
+{
+	width: 235px;
+	float: right;
+}
+
+#rating-container img
+{
+	width: 45px;
+	height: 45px;
+}
+
+#clanbanner img
+{
+	width: 512px;
+	height: 128px;
+	
+}
+
+#clanbanner
+{
+	width: 50%;
+	float: left;
+	margin-left: 350px;
+	border: 2px solid #73AD21;
+}
+
+
+
+#clanholder
+{
+	width: 100%;
+	padding: 5px;
+}
+
+
+#clan
+{
+	width: 20%;
+	float: left;
+	border: solid;
+	border-color: red;
+	background-color: gray;
+	
+	padding: 10px;
+	
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+#clan h1
+{
+	margin: 0;
+}
+
+
+#searchbar
+{
+	width: 100%;
+	color: white;
+	font-size: 1.4em;
+}
+
+#searchbar-container
+{
+	width: 60%;
+	margin: auto;
+	background-color: gray;
+	
+	padding: 12px;
+	border-radius: 25px;
+}
+
+
+
+
+
+
+#userinfo
+{
+	float: right;
+}
+
+#userinfo img
+{
+	float: left;
+	margin-top: 8px;
+	margin-right: 5px;
+}
+
+
+
+
+
+#registerclan_container
+{
+	width: 75%;
+	height: 600px;
+	margin: auto;
+	background-image: url('http://localhost/lfg/images/ripped_space2.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding-left: 10%;
+	padding-top: 7.5%;
+	color: white;
+}
+
+#registerform_clan
+{
+	width: 70%;
+	
+	margin: auto;
+	margin-top: 3%;
+	height: 300px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+#registerclan_formelement
+{
+	width: 90%;
+}
+
+#registerclan_formelement_red
+{
+	width: 90%;
+	border-width: 3px;
+	border-color: red;
+	border-style: solid;
+	padding: 10px;
+	margin-top: 5px;
+}
+
+#registerclan
+{
+  font-family: crayon;
+  margin: 0px;
+  background-color: #00000;
+   background-image: url('http://localhost/lfg/images/paperbackground.jpg');
+   background-repeat: no-repeat;
+   background-size: 100% 200%;
+}
+
+
+#registerform_clan input,select,textarea
+{
+	width: 100%;
+	font-size: 21px;
+	font-family: crayon;
+	border-radius: 5px;
+}
+
+
+
+
+#registerform_player
+{
+	width: 85%;
+	margin: auto;
+	font-size: 21px;
+}
+
+#registerform_player input,select,textarea
+{
+	width: 100%;
+	font-size: 21px;
+	font-family: crayon;
+	border-radius: 5px;
+}
+
+
+#registerform_player label
+{
+	font-weight: normal;
+}
+
+#registerform_player #twodeg
+{
+	transform: rotate(0.4deg);
+}
+
+#registerform_player #negtwodeg
+{
+	transform: rotate(-0.4deg);
+}
+
+#registerform_player #upsidedown
+{
+	/* transform: rotate(-180.85deg); */
+}
+#registerform_player
+{
+background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+
+background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+
+color:transparent;
+-webkit-background-clip: text;
+background-clip: text;
+}
+
+#registerform_player a:link
+{
+	text-decoration: none;
+	color: white;
+}
+
+#registerform_player a:visited
+{
+	text-decoration: none;
+	color: white;
+}
+
+#registerform_player a:hover
+{
+	text-decoration: none;
+	color: white;
+}
+
+#registerform_player a:active
+{
+	text-decoration: none;
+	color: white;
+}
+
+#registerplayercontainer
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 75%;
+	 background-image: url('http://localhost/lfg/images/blackboard.jpg');
+	 margin: auto;
+	
+	border: #2e1a12 solid 8px;
+	-webkit-border-image: url('http://localhost/lfg/images/wood.jpg') 100 stretch;
+	-moz-border-image: url('http://localhost/lfg/images/wood.jpg') 100 stretch;
+	border-image: url('http://localhost/lfg/images/wood.jpg') 100 stretch;
+}
+
+
+
+
+#searchclan
+{
+	background-image: url('http://localhost/lfg/images/partybackground.jpg');
+}
+
+
+.balloon {
+	width: 25%;
+    position: relative;
+    transform-origin: 50% 300%;
+    width: 16rem;
+	float: left;
+	
+	margin-left: 5px;
+	margin-right: 5px;
+	
+	z-index: -1;
+}
+
+
+.ball {
+    height: 20rem;
+    width: 100%;
+    background: rgba(0,50, 150, 1);
+    border-radius: 80%;
+    position: relative;
+    overflow: hidden;
+    
+    border: 1px solid #555;
+    box-shadow: 2px 2px 5ox #aaa;
+}
+
+.ball_red {
+    height: 20rem;
+    width: 100%;
+    background: rgba(200,0, 0, .8);
+    border-radius: 80%;
+    position: relative;
+    overflow: hidden;
+    
+    border: 1px solid #555;
+    box-shadow: 2px 2px 5ox #aaa;
+	
+	z-index: -1;
+}
+
+.ball_green {
+    height: 20rem;
+    width: 100%;
+    background: rgba(0,200, 0, .8);
+    border-radius: 80%;
+    position: relative;
+    overflow: hidden;
+    
+    border: 1px solid #555;
+    box-shadow: 2px 2px 5ox #aaa;
+	
+	z-index: -1;
+}
+
+
+
+.ball_blue {
+    height: 20rem;
+    width: 100%;
+    background: rgba(0,0, 200, .8);
+    border-radius: 80%;
+    position: relative;
+    overflow: hidden;
+    
+    border: 1px solid #555;
+    box-shadow: 2px 2px 5ox #aaa;
+	
+	z-index: -1;
+}
+
+
+
+.ball_yellow {
+    height: 20rem;
+    width: 100%;
+    background: rgba(180,180, 0, .8);
+    border-radius: 80%;
+    position: relative;
+    overflow: hidden;
+    
+    border: 1px solid #555;
+    box-shadow: 2px 2px 5ox #aaa;
+	
+	z-index: -1;
+}
+
+
+
+.ball_orange {
+    height: 20rem;
+    width: 100%;
+    background: rgba(255,190,0, .8);
+    border-radius: 80%;
+    position: relative;
+    overflow: hidden;
+    
+    border: 1px solid #555;
+    box-shadow: 2px 2px 5ox #aaa;
+	
+	z-index: -1;
+}
+
+
+
+.ball_magenta {
+    height: 20rem;
+    width: 100%;
+    background: rgba(180,0,180, .8);
+    border-radius: 80%;
+    position: relative;
+    overflow: hidden;
+    
+    border: 1px solid #555;
+    box-shadow: 2px 2px 5ox #aaa;
+	
+	z-index: -1;
+}
+
+
+
+.ball_purple {
+    height: 20rem;
+    width: 100%;
+    background: rgba(75,0,130, .8);
+    
+	
+	
+    position: relative;
+    overflow: hidden;
+    
+    border: 1px solid #555;
+	
+	border-radius: 80%;
+    box-shadow: 2px 2px 5ox #aaa;
+	
+	z-index: -1;
+}
+
+
+
+
+.ball:before {
+    content: "";
+    height: 20rem;
+    width: 16rem;
+    background: rgba(0,50, 150, .3);
+    border-radius: 80%;
+    display: inline-block;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+	
+	z-index: -1;
+}
+
+
+
+.ball_red:before {
+    content: "";
+    height: 20rem;
+    width: 16rem;
+    background: rgba(225,0, 0, .3);
+    border-radius: 80%;
+    display: inline-block;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+	z-index: -1;
+}
+
+
+.ball_green:before {
+    content: "";
+    height: 20rem;
+    width: 16rem;
+    background: rgba(0,225, 0, .3);
+    border-radius: 80%;
+    display: inline-block;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+	
+	z-index: -1;
+}
+
+
+
+.ball_blue:before {
+    content: "";
+    height: 20rem;
+    width: 16rem;
+    background: rgba(0,0, 225, .3);
+    border-radius: 80%;
+    display: inline-block;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+	
+	z-index: -1;
+}
+
+
+
+.ball_yellow:before {
+    content: "";
+    height: 20rem;
+    width: 16rem;
+    background: rgba(225,225, 0, .3);
+    border-radius: 80%;
+    display: inline-block;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+	
+	z-index: -1;
+}
+
+
+
+.ball_orange:before {
+    content: "";
+    height: 20rem;
+    width: 16rem;
+    background: rgba(255,165,0, .3);
+    border-radius: 80%;
+    display: inline-block;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+	z-index: -1;
+}
+
+
+.ball_magenta:before {
+    content: "";
+    height: 20rem;
+    width: 16rem;
+    background: rgba(255,0,255, .3);
+    border-radius: 80%;
+    display: inline-block;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+	
+	z-index: -1;
+}
+
+
+
+.ball_purple:before {
+    content: "";
+    height: 20rem;
+    width: 16rem;
+    background: rgba(75,0,130, .3);
+    border-radius: 80%;
+    display: inline-block;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+	
+	z-index: -1;
+}
+
+
+
+.stick {
+    content: "";
+    width: .1rem;
+    height: 200%;
+    background: rgba(50,50,50, .8);
+    display: inline-block;
+    position: absolute;
+    top: 20rem;
+    left: 8rem;
+    overflow: visible;
+}
+
+.balloonknot
+{
+	width: 0;
+      height: 0;
+      border: 50px solid transparent;
+      border-bottom: 20px solid rgba(0,50, 150, .8);
+      position: relative;
+      top: -50px;
+	  
+	  margin: auto;
+}
+
+.balloonknot_red
+{
+	width: 0;
+      height: 0;
+      border: 50px solid transparent;
+	  
+      border-bottom: 20px solid rgba(180,0, 0, .8);
+      position: relative;
+      top: -50px;
+	  
+	  margin: auto;
+	  
+	 
+}
+
+.balloonknot_green
+{
+	width: 0;
+      height: 0;
+      border: 50px solid transparent;
+      border-bottom: 20px solid rgba(0,180, 0, .8);
+      position: relative;
+      top: -50px;
+	  
+	  margin: auto;
+	  border-radius: 100px;
+}
+
+.balloonknot_blue
+{
+	width: 0;
+      height: 0;
+      border: 50px solid transparent;
+      border-bottom: 20px solid rgba(0,0, 180, .8);
+      position: relative;
+      top: -50px;
+	  
+	  margin: auto;
+	  border-radius: 100px;
+}
+
+.balloonknot_yellow
+{
+	width: 0;
+      height: 0;
+      border: 50px solid transparent;
+      border-bottom: 20px solid rgba(180,180, 0, .8);
+      position: relative;
+      top: -50px;
+	  
+	  margin: auto;
+	  border-radius: 100px;
+}
+
+.balloonknot_magenta
+{
+	width: 0;
+      height: 0;
+      border: 50px solid transparent;
+      border-bottom: 20px solid rgba(255,0,255, .8);
+      position: relative;
+      top: -50px;
+	  
+	  margin: auto;
+	  border-radius: 100px;
+}
+
+.balloonknot_orange
+{
+	width: 0;
+      height: 0;
+      border: 50px solid transparent;
+      border-bottom: 20px solid rgba(255,165,0, .8);
+      position: relative;
+      top: -50px;
+	  
+	  margin: auto;
+	  border-radius: 100px;
+}
+
+.balloonknot_purple
+{
+	width: 0;
+      height: 0;
+      border: 50px solid transparent;
+      border-bottom: 20px solid rgba(75,0,130, .8);
+      position: relative;
+      top: -50px;
+	  
+	  margin: auto;
+	  border-radius: 100px;
+}
+
+#textonballoon
+{
+	width: 75%;
+	margin: auto;
+	margin-right: 10px;
+	
+	z-index: 1;
+}
+
+
+
+#textonballoon h1
+{
+	margin-top: 70px;
+	font-size: 1vw;
+}
+
+#textonballoon a
+{
+	text-decoration: none;
+	color: white;
+}
+
+
+#searchplayer
+{
+	background-image: url('http://localhost/lfg/images/underwater2.jpg');
+
+	font-family: gomocha;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bubble 
+{
+	width: 25%;
+	height: 328px;
+	float: left;
+	background-image: url('http://localhost/lfg/images/BubbleSimple.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 55px;
+}
+
+#textonbubble
+{
+	width: 55%;
+	margin: auto;
+	
+	color: orange;
+	text-shadow: -1.5px 0px black;
+	font-size: 1.5em;
+	letter-spacing: 2px;
+}
+
+#textonbubble a
+{
+	text-decoration: underline;
+	color: white;
+}
